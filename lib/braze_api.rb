@@ -1,6 +1,4 @@
-require "braze_api/version"
+require 'braze_api/version'
+require 'braze_api/client'
 
-module BrazeAPI
-  class Error < StandardError; end
-  # Your code goes here...
-end
+module BrazeAPI; end
