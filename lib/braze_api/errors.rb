@@ -1,5 +1,5 @@
 module BrazeAPI
-  module Error
+  module Errors
     # Error to raise when 400 Bad Request
     class BadRequest < StandardError; end
     # Error to raise when 401 Unauthorized
