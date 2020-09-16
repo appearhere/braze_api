@@ -2,10 +2,14 @@ require 'faraday'
 require 'JSON'
 require 'braze_api/response/raise_error'
 require 'braze_api/errors'
+require 'braze_api/endpoints/users/track'
 
 module BrazeAPI
   # The top-level class that handles configuration and connection to the Braze API.
   class Client
+    attr_reader :app_id
+    include BrazeAPI::Endpoints::Users::Track
+
     def initialize(api_key:, braze_url:, app_id:)
       @api_key = api_key
       @braze_url = braze_url
@@ -20,7 +24,7 @@ module BrazeAPI
 
     private
 
-    attr_reader :api_key, :app_id, :braze_url
+    attr_reader :api_key, :braze_url
     # Creates a Faraday connection if there is none, otherwise returns the existing.
     def client
       @client ||= Faraday.new(braze_url) do |faraday|
