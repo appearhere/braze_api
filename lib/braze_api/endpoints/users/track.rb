@@ -32,8 +32,8 @@ module BrazeAPI
         private
 
         # Adds the time (mandatory for events and purchases) and the app id
-        def add_time_and_app_id(events)
-          events.map { |event| event.merge!(time: Time.now.iso8601, app_id: app_id) }
+        def add_time_and_app_id(tracking_objects)
+          tracking_objects.map { |obj| obj.merge!(time: Time.now.iso8601, app_id: app_id) }
         end
       end
     end
