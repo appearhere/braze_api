@@ -5,6 +5,7 @@ require 'braze_api/errors'
 require 'braze_api/endpoints/users/track'
 require 'braze_api/endpoints/users/alias'
 require 'braze_api/endpoints/users/identify'
+require 'braze_api/endpoints/users/export'
 
 module BrazeAPI
   # The top-level class that handles configuration and connection to the Braze API.
@@ -13,6 +14,7 @@ module BrazeAPI
     include BrazeAPI::Endpoints::Users::Track
     include BrazeAPI::Endpoints::Users::Alias
     include BrazeAPI::Endpoints::Users::Identify
+    include BrazeAPI::Endpoints::Users::Export
 
     def initialize(api_key:, braze_url:, app_id:)
       @api_key = api_key
