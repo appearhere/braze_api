@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe BrazeAPI::Client do
   let(:api_key) { 'abcdefg' }
   let(:app_id) { 'hijklmnop' }
@@ -55,7 +57,7 @@ RSpec.describe BrazeAPI::Client do
           { message: 'Unauthorized' }.to_json
         ]
       end
-      expect { client.post( 'test/endpoint', params: post_body) }
+      expect { client.post('test/endpoint', params: post_body) }
         .to raise_error(BrazeAPI::Errors::Unauthorized)
     end
 
@@ -67,7 +69,7 @@ RSpec.describe BrazeAPI::Client do
           { message: 'Not Found' }.to_json
         ]
       end
-      expect { client.post( 'test/endpoint', params: post_body) }
+      expect { client.post('test/endpoint', params: post_body) }
         .to raise_error(BrazeAPI::Errors::NotFound, 'Not Found')
     end
 
@@ -79,7 +81,7 @@ RSpec.describe BrazeAPI::Client do
           { message: 'Rate Limited' }.to_json
         ]
       end
-      expect { client.post( 'test/endpoint', params: post_body) }
+      expect { client.post('test/endpoint', params: post_body) }
         .to raise_error(BrazeAPI::Errors::NotFound, 'Rate Limited')
     end
   end

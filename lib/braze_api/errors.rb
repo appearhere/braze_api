@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BrazeAPI
   module Errors
     # Error to raise when 400 Bad Request

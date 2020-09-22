@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe BrazeAPI::Endpoints::Users::Alias do
   let(:api_key) { 'abcdefg' }
   let(:app_id) { 'hijklmnop' }

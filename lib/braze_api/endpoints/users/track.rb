@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'time'
 module BrazeAPI
   module Endpoints
     module Users
       # Methods to call the users/track endpoint from a client instance
       module Track
-        PATH = '/users/track'.freeze
+        PATH = '/users/track'
 
         # The main method calling the endpoint.
         # Called with an object containing multiple events and/or purchases and attributes.

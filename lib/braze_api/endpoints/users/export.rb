@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module BrazeAPI
   module Endpoints
     module Users
       # Methods to call the users/export endpoint from a client instance
       module Export
-        PATH = '/users/export/ids'.freeze
+        PATH = '/users/export/ids'
         # The main method calling the endpoint.
         # Called with an email, array of external_ids,
         # and the fields that you wish to export data on.
