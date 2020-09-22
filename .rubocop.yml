@@ -1,0 +1,8 @@
+Layout/LineLength:
+  Max: 100
+
+Metrics/BlockLength:
+  Max: 25
+  Exclude:
+    - spec/**/*_spec.rb
+    - braze_api.gemspec

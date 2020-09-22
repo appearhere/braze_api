@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faraday'
 require 'json'
 require 'braze_api/response/raise_error'

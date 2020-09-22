@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module BrazeAPI
   module Endpoints
     module Users
       # Methods to call the users/alias/new endpoint from a client instance
       module Alias
-        PATH = '/users/alias/new'.freeze
+        PATH = '/users/alias/new'
 
         # The main method calling the endpoint.
         # Called with an alias name and an alias label.

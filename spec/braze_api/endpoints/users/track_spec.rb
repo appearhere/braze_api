@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe BrazeAPI::Endpoints::Users::Track do
   let(:api_key) { 'abcdefg' }
   let(:app_id) { 'hijklmnop' }
@@ -77,7 +79,7 @@ RSpec.describe BrazeAPI::Endpoints::Users::Track do
     it 'sends a single attribute object to the users track endpoint' do
       expect(subject)
         .to receive(:post)
-        .with('/users/track', params: {attributes: [attributes.first]})
+        .with('/users/track', params: { attributes: [attributes.first] })
 
       subject.track_attribute(attributes.first)
     end

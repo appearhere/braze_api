@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status do
   let(:api_key) { 'abcdefg' }
   let(:app_id) { 'hijklmnop' }
@@ -14,10 +16,18 @@ RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status do
         .to receive(:post)
         .with(
           '/subscription/status/set',
-          params: { external_id: external_id, subscription_group_id: subscription_group_id, subscription_state: 'subscribed' }
+          params: {
+            external_id: external_id,
+            subscription_group_id: subscription_group_id,
+            subscription_state: 'subscribed'
+          }
         )
 
-      subject.update_status(external_id: external_id, subscription_group_id: subscription_group_id, subscription_state: 'subscribed')
+      subject.update_status(
+        external_id: external_id,
+        subscription_group_id: subscription_group_id,
+        subscription_state: 'subscribed'
+      )
     end
   end
 end
