@@ -1,5 +1,5 @@
 require 'faraday'
-require 'JSON'
+require 'json'
 require 'braze_api/response/raise_error'
 require 'braze_api/errors'
 require 'braze_api/endpoints/users/track'
