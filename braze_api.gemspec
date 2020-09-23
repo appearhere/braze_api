@@ -11,8 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['janie.amero@gmail.com']
 
   spec.summary       = 'Braze API wrapper for Ruby'
-  spec.description   = 'Braze API wrapper for Ruby'
-  spec.homepage      = 'https://www.appearhere.co.uk'
+  spec.homepage      = 'https://github.com/appearhere/braze_api'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -36,10 +35,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '>= 2.4.4'
 
-  spec.add_dependency 'faraday', '~> 1.0.1'
+  spec.add_runtime_dependency 'faraday', '~> 1.0'
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry', '~> 0.13.1'
-  spec.add_development_dependency 'rake', '~> 12.3.3'
+  spec.add_development_dependency 'rake', '~> 12.3'
   spec.add_development_dependency 'rspec', '~> 3.9'
   spec.add_development_dependency 'rubocop', '~> 0.91'
 end
