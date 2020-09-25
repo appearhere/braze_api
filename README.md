@@ -1,4 +1,5 @@
 # BrazeAPI
+[![Gem Version](https://badge.fury.io/rb/braze_api.svg)](https://badge.fury.io/rb/braze_api) ![Lint & Test](https://github.com/appearhere/braze_api/workflows/Lint%20&%20Test/badge.svg?branch=master&event=push)
 
 The BrazeAPI gem is a Ruby wrapper for the [Braze REST API](https://www.braze.com/docs/api/basics/)
 
