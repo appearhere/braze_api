@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '>= 2.4.4'
 
-  spec.add_runtime_dependency 'faraday', '~> 1.0'
+  spec.add_runtime_dependency 'faraday', '~> 0.15'
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry', '~> 0.13.1'
   spec.add_development_dependency 'rake', '~> 12.3'
