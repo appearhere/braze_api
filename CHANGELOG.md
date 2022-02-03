@@ -1,3 +1,3 @@
-# v0.1.1
+# v0.1.2
 
-Update faraday dependency to v0.15
+Adds method to delete users.
