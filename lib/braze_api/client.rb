@@ -8,6 +8,7 @@ require 'braze_api/endpoints/users/track'
 require 'braze_api/endpoints/users/alias'
 require 'braze_api/endpoints/users/identify'
 require 'braze_api/endpoints/users/export'
+require 'braze_api/endpoints/users/delete'
 require 'braze_api/endpoints/subscription_groups/status'
 
 module BrazeAPI
@@ -18,6 +19,7 @@ module BrazeAPI
     include BrazeAPI::Endpoints::Users::Alias
     include BrazeAPI::Endpoints::Users::Identify
     include BrazeAPI::Endpoints::Users::Export
+    include BrazeAPI::Endpoints::Users::Delete
     include BrazeAPI::Endpoints::SubscriptionGroups::Status
 
     def initialize(api_key:, braze_url:, app_id:)
