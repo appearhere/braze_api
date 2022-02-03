@@ -82,6 +82,24 @@ Called with an email and not passed fields to export will return all fields for 
 ```ruby
 braze.export_users(email: 'hello@gmail.com')
 ```
+### Users Delete Endpoint:
+
+[Delete Users](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete)
+
+Called with an array of external ids returns an object with the number of users queued for deletion
+```ruby
+braze.delete_users(external_ids: ['123', '345'])
+```
+
+Called with an array of braze ids returns an object with the number of users queued for deletion
+```ruby
+braze.delete_users(braze_ids: ['123', '345'])
+```
+
+Called with an array of user aliases returns an object with the number of users queued for deletion
+```ruby
+braze.delete_users(user_aliases: [ { user_alias: { alias_name: 'pete', alias_label: 'sampras' } } ])
+```
 
 ### Subscription Groups Status Set Endpoint:
 
