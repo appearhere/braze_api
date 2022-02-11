@@ -6,7 +6,7 @@ RSpec.describe BrazeAPI::Endpoints::Users::Delete do
   let(:braze_url) { 'https://rest.fra-01.braze.eu' }
   let(:external_ids) { %w[12314es5 23r2352f 124234f] }
   let(:braze_ids) { %w[a123 b456 c789] }
-  let(:user_aliases) { [{user_alias: {alias_name: 'pete', alias_label: 'sampras'}}] }
+  let(:user_aliases) { [{ user_alias: { alias_name: 'pete', alias_label: 'sampras' } }] }
   let(:subject) { BrazeAPI::Client.new(api_key: api_key, app_id: app_id, braze_url: braze_url) }
   before { allow(subject).to receive(:post).and_return('success') }
 
