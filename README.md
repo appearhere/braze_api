@@ -126,6 +126,48 @@ braze.update_status(
 )
 ```
 
+### Subscription Group Status Endpoint:
+
+[Get Subscription Group Status](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)
+
+With this method you can get a user's subscription group state. One of external_id or email or phone is required for each user.
+The external_id, email, phone can be passed as an array of strings with a max of 50. Submitting both an email address and phone number (with no external_id) will result in an error.
+
+```ruby
+# With an external_id (can also be an array)
+braze.status(
+  external_id: '123',
+  subscription_group_id: 'b6dw887f-d8de-456f-345a-fc5ad8734723'
+)
+# With an email (can also be an array)
+braze.status(
+  email: 'hello@gmail.com',
+  subscription_group_id: 'b6dw887f-d8de-456f-345a-fc5ad8734723'
+)
+# With an phone (can also be an array)
+braze.status(
+  phone: 'hello@gmail.com',
+  subscription_group_id: 'b6dw887f-d8de-456f-345a-fc5ad8734723'
+)
+```
+
+### Subscription Groups Statuses Endpoint:
+
+[Get Subscription Groups Statuses for a User](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_groups/)
+
+With this method you can get a user's subscription group states.  It is called with an email and an external id for an email subscription group, and with a phone number and an external id for a push subscription group.
+```ruby
+# With only an email for email subscription groups (email can also be an array)
+braze.statuses(
+  external_id: '123',
+  email: 'hello@gmail.com',
+)
+# With only an phone for sms subscription groups (phone can also be an array)
+braze.statuses(
+  external_id: '123',
+  phone: '+440000000000',
+)
+```
 
 ## Development
 
