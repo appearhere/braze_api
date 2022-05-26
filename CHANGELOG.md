@@ -1,3 +1,3 @@
-# v0.1.2
+# v0.1.3
 
-Adds method to delete users.
+Adds extra support for subscription groups
