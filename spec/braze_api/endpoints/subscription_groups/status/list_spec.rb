@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Statuses do
+RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status::List do
   let(:api_key) { 'abcdefg' }
   let(:app_id) { 'hijklmnop' }
   let(:braze_url) { 'https://rest.fra-01.braze.eu' }
