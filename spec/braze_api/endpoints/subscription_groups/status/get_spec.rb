@@ -19,13 +19,13 @@ RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status::Get do
           '/subscription/status/get',
           params: {
             external_id: external_id,
-            subscription_group_id: subscription_group_id,
+            subscription_group_id: subscription_group_id
           }
         )
 
       subject.status(
         external_id: external_id,
-        subscription_group_id: subscription_group_id,
+        subscription_group_id: subscription_group_id
       )
     end
 
@@ -36,13 +36,13 @@ RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status::Get do
           '/subscription/status/get',
           params: {
             email: email,
-            subscription_group_id: subscription_group_id,
+            subscription_group_id: subscription_group_id
           }
         )
 
       subject.status(
         email: email,
-        subscription_group_id: subscription_group_id,
+        subscription_group_id: subscription_group_id
       )
     end
 
@@ -53,13 +53,13 @@ RSpec.describe BrazeAPI::Endpoints::SubscriptionGroups::Status::Get do
           '/subscription/status/get',
           params: {
             phone: phone,
-            subscription_group_id: subscription_group_id,
+            subscription_group_id: subscription_group_id
           }
         )
 
       subject.status(
         phone: phone,
-        subscription_group_id: subscription_group_id,
+        subscription_group_id: subscription_group_id
       )
     end
   end
