@@ -17,6 +17,7 @@ module BrazeAPI
   # The top-level class that handles configuration and connection to the Braze API.
   class Client
     attr_reader :app_id
+
     include BrazeAPI::Endpoints::Users::Track
     include BrazeAPI::Endpoints::Users::Alias
     include BrazeAPI::Endpoints::Users::Identify
@@ -47,6 +48,7 @@ module BrazeAPI
     private
 
     attr_reader :api_key, :braze_url
+
     # Creates a Faraday connection if there is none, otherwise returns the existing.
     def client
       @client ||= Faraday.new(braze_url) do |faraday|
